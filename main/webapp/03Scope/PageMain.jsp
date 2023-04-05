@@ -13,8 +13,6 @@
 <title>page 영역</title>
 </head>
 <body>
-<!-- include는 그 페이지에 추가되서 main에 저장된 값을 가져올수 있지만
-		movepage를 하면 다른 pagecontext로 만들어지기때문에 main에 저장된 값을 가져올수 없어 오류가 남 -->
 	<h2>page 영역 속성값</h2>
 <%
 	int pInt=(Integer)(pageContext.getAttribute("pInteger"));
@@ -26,9 +24,5 @@
 		<li>문자열:<%=pStr %></li>
 		<li>객체:<%=pObj.getName()%>,<%=pObj.getAge()%></li>
 	</ul>
-	
-	<%@ include file="PageInclude.jsp" %>
-	
-	<a href="PageMove.jsp">page이동</a>
 </body>
 </html>

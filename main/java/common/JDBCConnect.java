@@ -58,10 +58,11 @@ public class JDBCConnect {
       }
    }
    
-   
-   
    public void close() {
          try {
+        	 if(rs!=null) rs.close();
+        	 if(stmt!=null) stmt.close();
+        	 if(psmt!=null) psmt.close();
             if(con!=null) con.close();
             System.out.println("DB 연결 해제");
          } catch (Exception e) {

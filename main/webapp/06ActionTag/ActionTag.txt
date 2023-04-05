@@ -1,0 +1,31 @@
+Action Tag
+JSP 표준태그
+XML 표준문법(반드시 종료 태그, 태그사이 주석 X)
+표현식 <%=%>
+
+<jsp:include> : 외부 파일을 현재 파일에 포함
+	지시어 <%@ include file="path"%>
+			액션 태그 			지시어
+표현식		가능 				불가능
+결과			포함				하나의 페이지로 포함
+변수 			별개				하나의 페이지 변수
+page	 	공유x			공유o
+
+<jsp:forward> : 다른 페이지로 요청(request)을 넘김
+	request.getRequestDispatcher().forward(request, response)
+	
+<jsp:useBean> , <jsp:setProperty> , <jsp:getProperty>
+	:자바빈즈 생성 값 할당 불러오기
+	<jsp:useBean id="구분자" class="대상클래스" scope="기본값 page/저장될 영역" />
+	<jsp:setProperty name="자바빈즈 id" property="속성명(멤버변수명)" value="저장값" />
+	<jsp:getProperty name="자바빈즈 id" property="속성명(멤버변수명)" />
+	
+<jsp:param> : 다른 페이지로 매개변수 전달
+	<jsp:include> <jsp:forward> 함께 사용
+	
+화면 이동
+	<jsp:forward>
+	requestDispatcher().forward()
+	javascript location.href() , location.replace
+	response.sendRedirect
+	<meta http-equiv=refresb content="시간;url=목적지">
