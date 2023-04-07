@@ -3,6 +3,7 @@ package board;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
 
 import javax.servlet.ServletContext;
 
@@ -60,6 +61,43 @@ public class BoardDao extends JDBCConnect{
 		return bl;
 	}
 	
+	//페이지별 게시물 읽어오기
+	public List<BoardDto> getListPage(Map<String, Object> param){
+	      List<BoardDto> bl = new Vector<>();
+	      String sql="select * from ("
+	            + "select rownum pnum, s.* from("
+	            + "select b.* from board b";
+	      if(param.get("findWord")!=null) {
+	         sql += " where "+param.get("findCol")+" like '%"+param.get("findWord")+"%'";
+	            }
+	      sql+=" order by num desc"
+	            + ") s"
+	            + ")"
+	            + " where pnum between ? and ?";
+	      
+	      try {
+	         psmt = con.prepareStatement(sql);
+	         psmt.setString(1, param.get("start").toString());
+	         psmt.setString(2, param.get("end").toString());
+	         rs = psmt.executeQuery();
+	         while(rs.next()) {
+	            BoardDto dto = new BoardDto();
+	            dto.setNum(rs.getString("num"));
+	            dto.setTitle(rs.getString("title"));
+	            dto.setContent(rs.getString("Content"));
+	            dto.setPostdate(rs.getDate("postdate"));
+	            dto.setId(rs.getString("id"));
+	            dto.setVisitcount(rs.getString("visitcount"));
+	            bl.add(dto);
+	         }
+	         
+	         
+	      }catch(Exception e) {System.out.println("게시물을 읽는 중 에러");}
+	      
+	      return bl;
+	   }
+	
+	//게시물 작성
 	public int insertWrite(BoardDto dto) {
 		int res=0;
 		try {
