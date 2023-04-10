@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fruitlist>
+	<fruit>
+		<name>사과</name>
+		<from>한국</from>
+		<price>4000</price>
+	</fruit>
+	<fruit>
+		<name>포도</name>
+		<from>한국</from>
+		<price>6000</price>
+	</fruit>
+	<fruit>
+		<name>오렌지</name>
+		<from>미국</from>
+		<price>5000</price>
+	</fruit>
+	<fruit>
+		<name>자몽</name>
+		<from>베트남</from>
+		<price>6000</price>
+	</fruit>
+	<fruit>
+		<name>수박</name>
+		<from>한국</from>
+		<price>10000</price>
+	</fruit>
+</fruitlist>
