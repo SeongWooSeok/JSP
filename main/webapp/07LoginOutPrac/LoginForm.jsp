@@ -16,7 +16,7 @@
 	//로그아웃 된 상태	%>
 	<form action="LoginProcess.jsp" method="post" name="loginForm" >
 		아이디:<input type="text" name="user_id" required/><br>
-		패스워드:<input type="password" name="user_pw"  required/><br>
+		패스워드:<input type="password" name="user_pw" required="required"/><br>
 		<input type="submit" value="로그인" />	
 	</form>		
 <%	}else{ //로그인 된 상태 %>

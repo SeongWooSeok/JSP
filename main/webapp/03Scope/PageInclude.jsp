@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="common.Person" %>
+<%@ page import="common.Person" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>page 영역 include</title>
 </head>
 <body>
-	<h2>page 영역 Include</h2>
+	<h2>Include page 영역 속성값</h2>
 <%
 	int pInt2=(Integer)(pageContext.getAttribute("pInteger"));
 	String pStr2 = pageContext.getAttribute("pString").toString();

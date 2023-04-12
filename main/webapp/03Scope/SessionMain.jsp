@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="common.Person" %>
-    <%@ page import="java.util.ArrayList" %>
-    <%
-    	ArrayList<String> lists = new ArrayList<>();
-    	lists.add("목록");
-    	lists.add("모음");
-    	session.setAttribute("lists", lists);
-    %>
+<%@ page import="common.Person" %>
+<%@ page import="java.util.ArrayList" %>
+<%
+	ArrayList<String> lists = new ArrayList<String>();
+	lists.add("목록");
+	lists.add("모음");
+	session.setAttribute("lists", lists);
+%>
 <!DOCTYPE html>
 <html>
 <head>

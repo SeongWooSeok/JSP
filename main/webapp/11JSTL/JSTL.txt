@@ -1,10 +1,11 @@
 JSTL
 jsp standard tag library
-jsp에서 빈번하게 사용하는 반복문 조건문을 처리하는 동작을 모아 표준으로 만든 태그 라이브러리
+jsp에서 빈번한게 사용하는 반복문 조건문을 처리하는 동작을 모아 
+표준으로 만든 태그 라이브러리
 
-종류							기능																			접두어
-core							변수 선언, 조건문, 반복문, url처리							c
-formatting				숫자, 날짜, 시간 포멧지정											fmt
-xml							xml parsing															x
-function					컬렉션, 문자열 처리													fn
-sql							데이터베이스 연결 및 쿼리 실행								sql
+종류         기능							접두어(prefix)
+core		변수 선언 조건문 반복문 url 처리 	c
+formatting	숫자, 날짜 , 시간 포맷 지정		fmt
+xml			xml parsing					x
+function	컬렉션, 문자열 처리				fn
+sql			데이터베이스 연결 및 쿼리 실행		sql

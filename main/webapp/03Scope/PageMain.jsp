@@ -24,5 +24,18 @@
 		<li>문자열:<%=pStr %></li>
 		<li>객체:<%=pObj.getName()%>,<%=pObj.getAge()%></li>
 	</ul>
+	
+	<%@ include file="PageInclude.jsp" %>
+	
+	<a href="PageMove.jsp">page 이동</a>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

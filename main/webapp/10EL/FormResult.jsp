@@ -10,9 +10,14 @@
 	<h2>폼값 출력</h2>
 	<ul>
 		<li>${param.name}</li>
-		<li>${param.gender }</li>
-		<li>${param.grade }</li>
-		<li>${paramValues.hobby[0]}</li>
+		<li>${param.gender}</li>
+		<li>${param.grad}</li>
+		<li>${paramValues.hobby[0]}
+			${paramValues.hobby[1]}
+			${paramValues.hobby[2]}
+			${paramValues.hobby[3]}
+			${paramValues.hobby[4]}
+		</li>
 	</ul>
 </body>
 </html>

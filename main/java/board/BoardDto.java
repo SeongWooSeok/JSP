@@ -1,6 +1,6 @@
 package board;
 
-public class BoardDto {
+public class BoardDTO {
 	private String num;
 	private String title;
 	private String content;
@@ -51,5 +51,4 @@ public class BoardDto {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 }

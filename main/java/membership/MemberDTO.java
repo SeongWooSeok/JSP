@@ -6,8 +6,6 @@ public class MemberDTO {
 	private String name;
 	private String regdate;
 	
-	
-	
 	public String getId() {
 		return id;
 	}
@@ -32,5 +30,4 @@ public class MemberDTO {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-	
 }

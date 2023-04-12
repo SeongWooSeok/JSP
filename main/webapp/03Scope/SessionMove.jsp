@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
-<!-- session은 웹 브라우저가 끊기기전까지는 유지됨 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -10,11 +9,11 @@
 </head>
 <body>
 	<h2>다른 페이지 이동 후 session 속성 값</h2>
-	<%
-		ArrayList<String> lists = (ArrayList<String>)session.getAttribute("lists");
-		for(String item : lists){
-			out.print(item+"<br>");
-		}
-	%>
+<%
+	ArrayList<String> lists = (ArrayList<String>)session.getAttribute("lists");
+	for(String item:lists){
+		out.print(item+"<br>");
+	}
+%>
 </body>
 </html>

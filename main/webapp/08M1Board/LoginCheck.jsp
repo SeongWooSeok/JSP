@@ -3,7 +3,7 @@
 <%@ page import="utils.AlertFunc"%>
 <%
 	if(session.getAttribute("UserId")==null){
-		AlertFunc.alertLocation("로그인이 필요합니다.", "../07LoginOutPrac/LoginForm.jsp", out);
+		AlertFunc.alertLocation("로그인이 필요합니다.", "../07LogInOutPrac/LoginForm.jsp", out);
 		return;
 	}
 %>

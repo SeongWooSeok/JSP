@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Java Beans</title>
+<title>Java beans</title>
 </head>
 <body>
 	<h2>값 전달</h2>
@@ -13,7 +13,7 @@
 		<input type="text" name="name" /><br>
 		<label>나이</label>
 		<input type="text" name="age" /><br>
-		<input type="submit" value="전송" >
+		<input type="submit" value="전송" />
 	</form>
 </body>
 </html>

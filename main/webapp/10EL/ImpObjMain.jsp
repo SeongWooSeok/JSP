@@ -18,11 +18,15 @@
 		<li>${pageScope.scopeVal}</li>
 		<li>${requestScope.scopeVal}</li>
 		<li>${sessionScope.scopeVal}</li>
-		<li>${applicationScope.scopeVal }</li>
-	<h3>영역지정 없이 속성값 출력</h3>
+		<li>${applicationScope.scopeVal}</li>
+	<h3>영역지정없이 속성 값 출력</h3>
 		<li>${scopeVal}</li>
 	</ul>
 	
-	<jsp:forward page="ImpObjForward.jsp"></jsp:forward>
+	<jsp:forward page="ImpObjForward.jsp" />
 </body>
 </html>
+
+
+
+
