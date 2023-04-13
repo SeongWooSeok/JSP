@@ -57,7 +57,32 @@
             onclick="location.href='../m2board/list.do';">
                목록 바로가기
             </button>
-            
    </table>
+<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous">
+ </script>
+<script>
+ $('#downbtn').on("click",(e)=>{
+   e.preventDefault();
+   console.log('btn click');
+   $.ajax({
+      type:'post',
+      async:false, //아작스에 의해 동작해야 하는 상황에서 아작스보다 먼저 실행이 되면 오류이기 때문에 그것을 방지하고 있는 옵션(비동기식/동기식 선택 옵션)
+      url : '/jspstudy/m2board/download.do',
+      dataType:'text',
+      data:{idx:'${dto.idx}'},
+      success:function(data,textStatus){
+         console.log(data);
+         $('#dcount').text(data);
+      },
+      error:function(data,textStatus){
+         console.log('error',data,texStatus)
+      }
+   })
+ })
+</script>
+</script>
 </body>
 </html>

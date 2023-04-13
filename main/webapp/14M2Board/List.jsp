@@ -51,7 +51,7 @@
    <c:otherwise>
       <c:forEach items="${boardList}" var="list" varStatus="stat">
          <tr align="center">
-            <td>${list.idx}</td>
+            <td>${map.totalCount-((map.pageNum-1)*map.pageSize)-stat.index}</td>
             <td align="center">
                <a href="../m2board/view.do?idx=${list.idx}">${list.title}</a>
             </td>
